@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThreadsOfFate</name>
+    </assembly>
+    <members>
+        <member name="T:ThreadsOfFate.Config.SetUp">
+            <summary>
+            SetUp
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Config.SetUp.ApiVersioning(Microsoft.AspNetCore.Mvc.Versioning.ApiVersioningOptions)">
+            <summary>
+            ApiVersioning
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Config.SetUp.Swagger(Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenOptions)">
+            <summary>
+            Swagger
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Config.SetUp.SwaggerUi(Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions)">
+            <summary>
+            SwaggerUi
+            </summary>
+        </member>
+        <member name="T:ThreadsOfFate.Controllers.GlobalSearchController">
+            <inheritdoc />
+            <summary>
+            Контроллер для операций с поиском
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Controllers.PingController.Pong">
+            <summary>
+            GET: http://localhost:50500/v1.0/ping
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ThreadsOfFate.Controllers.PingController.Options">
+            <summary>
+            OPTIONS: http://localhost:50500/v1.0/ping
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ThreadsOfFate.Extensions.ActionDescriptorExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Extensions.ActionDescriptorExtensions.GetApiVersion(Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ThreadsOfFate.Filters.ApiVersionOperationFilter">
+            <summary>
+            ApiVersionOperationFilter
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Filters.ApiVersionOperationFilter.Apply(Swashbuckle.AspNetCore.Swagger.Operation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Apply
+            </summary>
+        </member>
+        <member name="T:ThreadsOfFate.Filters.GlobalExceptionFilterAttribute">
+            <inheritdoc />
+        </member>
+        <member name="M:ThreadsOfFate.Filters.GlobalExceptionFilterAttribute.#ctor(Microsoft.Extensions.Logging.ILogger{ThreadsOfFate.Filters.GlobalExceptionFilterAttribute})">
+            <inheritdoc />
+        </member>
+        <member name="M:ThreadsOfFate.Filters.GlobalExceptionFilterAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:ThreadsOfFate.Options.StartupOptions">
+            <summary>
+            Конфигурация приложения, зависит от среды выполнения
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.GlobalSearch.GlobalSearchQuery.Search">
+            <summary>
+            Текстовый поисковый запрос
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.GlobalSearch.GlobalSearchQuery.ExactSearch">
+            <summary>
+            Признак выключения проверки текста поискового запроса.
+            True - проверка не выполняется, подсказки по исправлению не возвращаются клиенту.
+            False - проверка выполняется, подсказки по исправлению формируются и возвращаются клиенту.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.GlobalSearch.GlobalSearchQuery.Skip">
+            <summary>
+            Количество найденных элементов, которые пропускаются - от 1 до Skip включительно.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.GlobalSearch.GlobalSearchQuery.Take">
+            <summary>
+            Количество найденных элементов, которые необходимо вернуть.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.UniversalSearch.SearchQuery.Search">
+            <summary>
+            Текстовый поисковый запрос
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.UniversalSearch.SearchQuery.ExactSearch">
+            <summary>
+            Признак выключения проверки текста поискового запроса.
+            True - проверка не выполняется, подсказки по исправлению не возвращаются клиенту.
+            False - проверка выполняется, подсказки по исправлению формируются и возвращаются клиенту.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.UniversalSearch.SearchQuery.Skip">
+            <summary>
+            Количество найденных элементов, которые пропускаются - от 1 до Skip включительно.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.UniversalSearch.SearchQuery.Take">
+            <summary>
+            Количество найденных элементов, которые необходимо вернуть.
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:ThreadsOfFate.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ThreadsOfFate.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.AspNetCore.Hosting.IApplicationLifetime)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+        </member>
+    </members>
+</doc>

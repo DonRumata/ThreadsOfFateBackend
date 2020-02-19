@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadsOfFate", "ThreadsOfFate\ThreadsOfFate.csproj", "{C3FA532B-F705-4EF9-9C5D-16FF14E41162}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{CD731525-E863-4547-A322-2C514B76722E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsofFate.Common", "ThreadofFate.Common\ThreadsofFate.Common.csproj", "{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Read Layer", "Read Layer", "{CCA6F6A6-0B5A-42B6-B31E-1BBB221B1C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsOfFate.ReadDomain", "ThreadsOfFate.ReadDomain\ThreadsOfFate.ReadDomain.csproj", "{2632898B-B4BF-4353-9B9E-40719AFEB051}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Layer", "Domain Layer", "{B8F0C35E-20E1-49C9-B8FA-DB31029011DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsOfFate.Domain", "ThreadsOfFate.Domain\ThreadsOfFate.Domain.csproj", "{9B17F606-F200-4FAE-A3E4-FB1FE879F438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadsOfFate.Domain.Dal", "ThreadsOfFate.Domain.Dal\ThreadsOfFate.Domain.Dal.csproj", "{4B46C841-DB4A-420B-99EF-742DAF3FF2E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3FA532B-F705-4EF9-9C5D-16FF14E41162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FA532B-F705-4EF9-9C5D-16FF14E41162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FA532B-F705-4EF9-9C5D-16FF14E41162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FA532B-F705-4EF9-9C5D-16FF14E41162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2632898B-B4BF-4353-9B9E-40719AFEB051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2632898B-B4BF-4353-9B9E-40719AFEB051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2632898B-B4BF-4353-9B9E-40719AFEB051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2632898B-B4BF-4353-9B9E-40719AFEB051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B17F606-F200-4FAE-A3E4-FB1FE879F438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B17F606-F200-4FAE-A3E4-FB1FE879F438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B17F606-F200-4FAE-A3E4-FB1FE879F438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B17F606-F200-4FAE-A3E4-FB1FE879F438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B46C841-DB4A-420B-99EF-742DAF3FF2E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B46C841-DB4A-420B-99EF-742DAF3FF2E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B46C841-DB4A-420B-99EF-742DAF3FF2E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B46C841-DB4A-420B-99EF-742DAF3FF2E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CBF7A4A-1B25-4F5D-84AB-210CEA32E11A} = {CD731525-E863-4547-A322-2C514B76722E}
+		{2632898B-B4BF-4353-9B9E-40719AFEB051} = {CCA6F6A6-0B5A-42B6-B31E-1BBB221B1C37}
+		{9B17F606-F200-4FAE-A3E4-FB1FE879F438} = {B8F0C35E-20E1-49C9-B8FA-DB31029011DA}
+		{4B46C841-DB4A-420B-99EF-742DAF3FF2E4} = {B8F0C35E-20E1-49C9-B8FA-DB31029011DA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {264C4966-6F1D-4831-87B5-83ADFD93FF24}
+	EndGlobalSection
+EndGlobal
