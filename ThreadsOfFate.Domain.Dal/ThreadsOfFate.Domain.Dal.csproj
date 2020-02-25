@@ -17,4 +17,12 @@
     <ProjectReference Include="..\ThreadofFate.Common\ThreadsofFate.Common.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\Search\" />
+    <Folder Include="Queries\Abstractions\Spell\" />
+    <Folder Include="Queries\Spell\" />
+    <Folder Include="Specifications\Abstractions\" />
+    <Folder Include="Specifications\Filters\" />
+  </ItemGroup>
+
 </Project>

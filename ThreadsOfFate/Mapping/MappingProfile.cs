@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using ThreadsOfFate.ReadDomain.Specifications.Filters;
 using ThreadsOfFate.ReadDomain.Specifications.GlobalSearch;
 using ThreadsOfFate.ReadDomain.Specifications.GlobalSearch.Search;
 using ThreadsOfFate.ReadDomain.Specifications.UniversalSearch;
 using ThreadsOfFate.Requests.GlobalSearch;
+using ThreadsOfFate.Requests.SearchFilterOptions;
 using ThreadsOfFate.Requests.UniversalSearch;
 
 namespace ThreadsOfFate.Mapping
@@ -20,6 +22,8 @@ namespace ThreadsOfFate.Mapping
             CreateMap<SearchQuery, SearchCollectionSpecification>();
             CreateMap<SpellSearchQueryFilter, SpellSearchFilterSpecification>();
             CreateMap<SearchQueryFilter, SearchFilterSpecification>();
+            CreateMap<SearchFilterOptionsQuery, SearchFilterOptionsSpecification>();
+            CreateMap<SpellSearchFilterOptionsFilter, SpellFilterOptionsSpecification>();
         }
     }
 }

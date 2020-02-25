@@ -30,6 +30,7 @@ namespace ThreadsOfFate.ReadDomain
             container.AddScoped<ISearchService, SearchService>();
             container.AddScoped<IGlobalSearchService, GlobalSearchService>();
             container.AddScoped<IBuildFilterQueryService, BuildFilterQueryService>();
+            container.AddScoped<ISearchFilterOptionsService, SearchFilterOptionsService>();
 
             //Queries
             container.AddScoped<IGetElasticItemQuery, GetElasticItemQuery>();

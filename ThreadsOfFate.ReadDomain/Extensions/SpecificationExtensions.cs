@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using ThreadsofFate.Common.Extensions;
+using ThreadsOfFate.Domain.Dal.Specifications.Abstractions;
 using ThreadsOfFate.ReadDomain.Specifications.Abstractions;
-using ThreadsOfFate.ReadDomain.Specifications.Abstractions.Elastic;
 using ThreadsOfFate.ReadDomain.Specifications.Abstractions.UniversalSearch;
+using IOptionsSearch = ThreadsOfFate.ReadDomain.Specifications.Abstractions.Elastic.IOptionsSearch;
 
 namespace ThreadsOfFate.ReadDomain.Extensions
 {

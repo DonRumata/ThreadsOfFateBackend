@@ -2,6 +2,7 @@
 {
     public class SpellSearchFilterSpecification
     {
+        public string[] Elements { get; set; }
         public string SpellContainsName { get; set; }
         public int? ShortDistance { get; set; }
         public int? LongDistance { get; set; }

@@ -1,8 +1,7 @@
 ﻿using System;
 using ThreadsOfFate.Domain.Dal.Dto.SearchStructure;
-using ThreadsOfFate.Domain.Dal.Model.Search;
 
-namespace ThreadsOfFate.ReadDomain.Model
+namespace ThreadsOfFate.Domain.Dal.Model.Search
 {
     public class CollectionWithCountersDto<TItem>:CollectionDto<TItem>
     {

@@ -42,7 +42,7 @@ namespace ThreadsOfFate.ReadDomain.Services
 
             var cntrs = new CounterDto
             {
-                Count = itemsCollection.Count,
+                Count = itemsCollection?.Count ?? 0,
                 Key = "spell"
             };
 

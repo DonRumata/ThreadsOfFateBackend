@@ -10,6 +10,8 @@ using ThreadsOfFate.Domain.Dal.Providers;
 using ThreadsOfFate.Domain.Dal.Providers.Abstractions;
 using ThreadsOfFate.Domain.Dal.Queries;
 using ThreadsOfFate.Domain.Dal.Queries.Abstractions;
+using ThreadsOfFate.Domain.Dal.Queries.Abstractions.Spell;
+using ThreadsOfFate.Domain.Dal.Queries.Spell;
 
 namespace ThreadsOfFate.Domain.Dal
 {
@@ -25,6 +27,7 @@ namespace ThreadsOfFate.Domain.Dal
             container.AddScoped<ISearchProvider, SearchProvider>();
 
             container.AddScoped<IGetSpellDescriptionQuery, GetSpellDescriptionQuery> ();
+            container.AddScoped<IGetSpellElementsFilterOptionsQuery, GetSpellElementsFilterOptionsQuery>();
         }
     }
 }

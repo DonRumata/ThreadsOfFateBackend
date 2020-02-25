@@ -16,10 +16,15 @@ namespace ThreadsOfFate.Domain.Dal.Contexts
         }
 
         public  DbSet<Spell> Spells { get; set; }
+        public DbSet<MagicElement> Elements { get; set; }
+        public DbSet<MagicElementToSpell> MagicElementsToSpells { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Spell>().ToTable(nameof(Spell)).HasKey(sp => sp.Id);
+            modelBuilder.Entity<MagicElement>().ToTable(nameof(MagicElement)).HasKey(sp => sp.Id);
+            modelBuilder.Entity<MagicElementToSpell>().ToTable(nameof(MagicElementToSpell)).HasKey(ets =>
+                new { SpellId = ets.SpellId, MagicElementId = ets.MagicElementId });
 
             modelBuilder.AddConfigurations();
         }

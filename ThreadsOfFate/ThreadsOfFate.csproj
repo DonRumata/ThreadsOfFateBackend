@@ -66,6 +66,7 @@
   </ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Requests\Filters\" />
 	  <Folder Include="ViewModel\Spell\" />
 	</ItemGroup>
 

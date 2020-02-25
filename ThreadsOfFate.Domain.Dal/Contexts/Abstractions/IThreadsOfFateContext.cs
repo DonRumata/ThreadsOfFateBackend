@@ -9,5 +9,7 @@ namespace ThreadsOfFate.Domain.Dal.Contexts.Abstractions
     interface IThreadsOfFateContext : IContext
     {
         DbSet<Spell> Spells { get; set; }
+        DbSet<MagicElement> Elements { get; set; }
+        DbSet<MagicElementToSpell> MagicElementsToSpells { get; set; }
     }
 }

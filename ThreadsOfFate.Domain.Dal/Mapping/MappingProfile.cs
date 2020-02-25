@@ -14,6 +14,8 @@ namespace ThreadsOfFate.Domain.Dal.Mapping
         {
             CreateMap<Spell, SpellDto>();
             CreateMap<SpellDto, SearchSpellItemDto>();
+            CreateMap<MagicElement, MagicElementDto>();
+            CreateMap<MagicElementToSpell, MagicElementToSpellDto>();
         }
     }
 }

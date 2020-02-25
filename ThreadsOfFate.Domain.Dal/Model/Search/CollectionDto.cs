@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace ThreadsOfFate.ReadDomain.Model
+namespace ThreadsOfFate.Domain.Dal.Model.Search
 {
     public class CollectionDto<TItem>
     {
         /// <summary>
         /// Коллекция найденных и возвращаемых объектов.
         /// </summary>
-        public ICollection<TItem> Items { get; set; }
+        public IEnumerable<TItem> Items { get; set; }
 
         /// <summary>
         /// Общее количество найденных объектов удовлетворяющих критериям поиска.

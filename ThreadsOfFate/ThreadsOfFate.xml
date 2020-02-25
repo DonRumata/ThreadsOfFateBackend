@@ -76,6 +76,21 @@
             Конфигурация приложения, зависит от среды выполнения
             </summary>
         </member>
+        <member name="P:ThreadsOfFate.Requests.SearchFilterOptions.SearchFilterOptionsQuery.OptionsSearch">
+            <summary>
+            Текстовый поисковый запрос для опции фильтра.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.SearchFilterOptions.SearchFilterOptionsQuery.OptionsSkip">
+            <summary>
+            Количество найденных элементов опций, которые пропускаются - от 1 до Skip включительно.
+            </summary>
+        </member>
+        <member name="P:ThreadsOfFate.Requests.SearchFilterOptions.SearchFilterOptionsQuery.OptionsTake">
+            <summary>
+            Количество найденных элементов опций, которые необходимо вернуть.
+            </summary>
+        </member>
         <member name="P:ThreadsOfFate.Requests.GlobalSearch.GlobalSearchQuery.Search">
             <summary>
             Текстовый поисковый запрос

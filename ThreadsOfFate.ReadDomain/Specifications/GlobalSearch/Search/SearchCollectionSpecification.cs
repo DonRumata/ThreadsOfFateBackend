@@ -1,5 +1,5 @@
 ﻿using ThreadsofFate.Common.Specifications;
-using ThreadsOfFate.ReadDomain.Specifications.Abstractions;
+using ThreadsOfFate.Domain.Dal.Specifications.Abstractions;
 using ThreadsOfFate.ReadDomain.Specifications.Abstractions.UniversalSearch;
 
 namespace ThreadsOfFate.ReadDomain.Specifications.GlobalSearch.Search
