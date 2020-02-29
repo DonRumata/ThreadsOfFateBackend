@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using ThreadsOfFate.Domain.Dal.Dto.Spell;
 
 namespace ThreadsOfFate.Domain.Dal.Providers.Abstractions
 {
     public interface ISearchProvider
     {
-        Task<SpellDto[]> SearchSpellsByText(string searchText);
+        Task<SpellDto[]> SearchSpellsByText(string searchText, Guid[] ElementsId);
     }
 }

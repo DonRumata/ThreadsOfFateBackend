@@ -9,5 +9,8 @@ namespace ThreadsOfFate.Domain.Dal.Model.ThreadsOfFate.Implementation.Entity.Spe
         public Guid SpellId { get; set; }
         public Guid MagicElementId { get; set; }
         public int MagicElementCount { get; set; }
+
+        public Spell SpellRef { get; set; }
+        public MagicElement MagicElementRef { get; set; }
     }
 }

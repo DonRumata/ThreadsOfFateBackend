@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ThreadsOfFate.Domain.Dal.Dto.Spell
+namespace ThreadsOfFate.Domain.Dal.ResponseDto.Spell
 {
-    public class SpellDto
+    [Serializable]
+    public class SpellImprovmentExtDto
     {
         public Guid Id { get; set; }
         public string SpellName { get; set; }
@@ -18,5 +19,7 @@ namespace ThreadsOfFate.Domain.Dal.Dto.Spell
         public decimal? DuranceTimeMinutes { get; set; }
         public int? LongDistance { get; set; }
         public int? DamageBonus { get; set; }
+        //improvments:ISpellImprovment[];
+        public SpellElementCountDto[] Elements { get; set; }
     }
 }

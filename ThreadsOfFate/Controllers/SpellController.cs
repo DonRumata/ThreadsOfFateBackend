@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ThreadsOfFate.Domain.Dal.Dto.Spell;
+using ThreadsOfFate.Domain.Dal.ResponseDto.Spell;
 using ThreadsOfFate.Domain.Dal.Specifications;
 using ThreadsOfFate.ReadDomain.Model;
 using ThreadsOfFate.ReadDomain.Model.GlobalSearch;
@@ -28,7 +29,7 @@ namespace ThreadsOfFate.Controllers
 
         [HttpGet("get")]
         [MapToApiVersion("1.0")]
-        public async Task<ActionResult<SpellDto>> GetSpell(Guid id)
+        public async Task<ActionResult<SpellExtDto>> GetSpell(Guid id)
         {
             var specification = new GetSpellSpecification(id);
 

@@ -18,5 +18,7 @@ namespace ThreadsOfFate.Domain.Dal.Model.ThreadsOfFate.Implementation.Entity.Spe
         public decimal? DuranceTimeMinutes { get; set; }
         public int? LongDistance { get; set; }
         public int? DamageBonus { get; set; }
+
+        public ICollection<MagicElementToSpell> MagicElementToSpellRef { get; set; }
     }
 }

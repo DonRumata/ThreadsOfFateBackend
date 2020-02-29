@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Castle.Core.Internal;
+using ThreadsofFate.Common.Extensions;
 using ThreadsofFate.Common.Services.Abstractions;
 using ThreadsOfFate.Domain.Dal.Dto.SearchStructure;
 using ThreadsOfFate.Domain.Dal.Dto.Spell;
@@ -36,9 +38,11 @@ namespace ThreadsOfFate.ReadDomain.Services
             specification.AdjustSkipTake();
             specification.NormalizeQuery();
 
-            var items = await _searchProvider.SearchSpellsByText(specification.Search);
+            var elementGuids = specification?.Filter?.Spell?.Elements?.Select(el => new Guid(el)).ToArray();
 
-            var itemsCollection = HandleSpells(items);
+            var items = await _searchProvider.SearchSpellsByText(specification.Search, elementGuids);
+
+            var itemsCollection = HandleSpells(items, specification.Search);
 
             var cntrs = new CounterDto
             {
@@ -60,7 +64,7 @@ namespace ThreadsOfFate.ReadDomain.Services
             return result;
         }
 
-        private ICollection<SearchItemDto> HandleSpells(SpellDto[] spells)
+        private ICollection<SearchItemDto> HandleSpells(SpellDto[] spells, string searchString)
         {
             var result = new List<SearchItemDto>();
 
@@ -77,15 +81,30 @@ namespace ThreadsOfFate.ReadDomain.Services
 
                 var addingSpellToSearchItem = new SearchItemDto
                 {
-                    Content = searchContentItemSpell,
                     Id = Guid.NewGuid().ToString(),
-                    ObjectType = "spell"
+                    Content = searchContentItemSpell,
+                    Hash = searchContentItemSpell.GetHashCode().ToString(),
+                    Highlights = GetHighlights(spell, searchString),
+                    ObjectType = "spell",
+                    Source = "spell"
                 };
 
                 result.Add(addingSpellToSearchItem);
             }
 
             return result;
+        }
+
+        private string[] GetHighlights(SpellDto spell, string searchString)
+        {
+            var words = searchString.SplitToWordsBySpace();
+            words = words.Select(w => w.StripSurrogates())
+                .Where(w => !string.IsNullOrWhiteSpace(w))
+                .ToArray();
+
+            var highlights = words.FindAll(w => string.Equals(w.ToLower(), searchString.ToLower()));
+
+            return highlights.ToArray();
         }
     }
 }

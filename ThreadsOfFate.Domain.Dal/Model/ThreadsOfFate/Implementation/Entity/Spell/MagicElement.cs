@@ -8,5 +8,7 @@ namespace ThreadsOfFate.Domain.Dal.Model.ThreadsOfFate.Implementation.Entity.Spe
     {
         public Guid Id { get; set; }
         public string ElementName { get; set; }
+
+        public ICollection<MagicElementToSpell> MagicElementToSpellRef { get; set; }
     }
 }

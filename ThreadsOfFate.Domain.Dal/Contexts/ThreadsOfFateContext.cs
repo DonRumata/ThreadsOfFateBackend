@@ -21,10 +21,34 @@ namespace ThreadsOfFate.Domain.Dal.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Spell>().ToTable(nameof(Spell)).HasKey(sp => sp.Id);
-            modelBuilder.Entity<MagicElement>().ToTable(nameof(MagicElement)).HasKey(sp => sp.Id);
-            modelBuilder.Entity<MagicElementToSpell>().ToTable(nameof(MagicElementToSpell)).HasKey(ets =>
-                new { SpellId = ets.SpellId, MagicElementId = ets.MagicElementId });
+            //modelBuilder.Entity<Spell>()
+            //    .HasMany(sp => sp.SpellToMagicElementToSpells)
+            //    .WithOne(sp => sp.SpellRef);
+
+            modelBuilder.Entity<Spell>().ToTable(nameof(Spell)).HasKey(t => t.Id);
+
+            //modelBuilder.Entity<MagicElement>()
+            //    .HasMany(sp => sp.MagicElementToMagicElementToSpells)
+            //    .WithOne(sp => sp.MagicElementRef);
+            modelBuilder.Entity<MagicElement>().ToTable(nameof(MagicElement));
+
+            modelBuilder.Entity<MagicElementToSpell>()
+                .ToTable(nameof(MagicElementToSpell));
+
+            //modelBuilder.Entity<MagicElementToSpell>().HasOne(sp => sp.SpellRef)
+            //    .WithMany(sp => sp.MagicElementToSpells);
+            //    //.HasForeignKey(sp => sp.SpellId);
+            //modelBuilder.Entity<MagicElementToSpell>().HasOne(el => el.MagicElementRef)
+            //    .WithMany(el => el.MagicElementToSpells);
+            //    //.HasForeignKey(el => el.MagicElementId);
+
+            modelBuilder.Entity<MagicElementToSpell>().HasKey(ets => new { SpellId = ets.SpellId, MagicElementId = ets.MagicElementId });
+            //magicElementToSpellBuilder.HasOne(t => t.SpellRef)
+            //    .WithMany(t => t.MagicElementToSpells)
+            //    .HasForeignKey(t => t.SpellId);
+            //magicElementToSpellBuilder.HasOne(t => t.MagicElementRef)
+            //    .WithMany(t => t.MagicElementToSpells)
+            //    .HasForeignKey(t => t.MagicElementId);
 
             modelBuilder.AddConfigurations();
         }

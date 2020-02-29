@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ThreadsOfFate.Domain.Dal.Dto.Spell;
 using ThreadsOfFate.Domain.Dal.Providers.Abstractions;
 using ThreadsOfFate.Domain.Dal.Queries.Abstractions;
+using ThreadsOfFate.Domain.Dal.ResponseDto.Spell;
 using ThreadsOfFate.Domain.Dal.Specifications;
 using ThreadsOfFate.ReadDomain.Services.Abstractions;
 
@@ -21,7 +22,7 @@ namespace ThreadsOfFate.ReadDomain.Services
             _spellQuery = spellQuery;
         }
 
-        public async Task<SpellDto> GetSpell(GetSpellSpecification specification)
+        public async Task<SpellExtDto> GetSpell(GetSpellSpecification specification)
         {
             return await _spellProvider.GetSpellByUid(specification.SpellId.Value).ConfigureAwait(false);
         }
